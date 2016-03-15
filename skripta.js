@@ -37,6 +37,10 @@ window.addEventListener('load', function() {
 	
 	var stop = function(event) {
 		ustavi = true;
+		var naNovo = document.querySelector("#start");
+		naNovo.innerHTML = "Zaženi stroboskop";
+		naNovo.removeEventListener('click', stop);
+		naNovo.addEventListener('click', zagon);
 	}
 	
 	var zagon = function(event) {
